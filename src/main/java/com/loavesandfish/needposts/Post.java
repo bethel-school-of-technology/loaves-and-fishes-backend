@@ -11,7 +11,7 @@ private Integer id;
 private String name;
 private String postContent;
 private String city;
-private String catagory;
+private String category;
 private Integer amount;
 public Integer getId() {
 	return id;
@@ -37,11 +37,11 @@ public String getCity() {
 public void setCity(String city) {
 	this.city = city;
 }
-public String getCatagory() {
-	return catagory;
+public String getCategory() {
+	return category;
 }
-public void setCatagory(String catagory) {
-	this.catagory = catagory;
+public void setCategory(String category) {
+	this.catagory = category;
 }
 public Integer getAmount() {
 	return amount;
