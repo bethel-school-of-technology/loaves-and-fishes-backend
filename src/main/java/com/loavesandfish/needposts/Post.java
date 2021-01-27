@@ -1,5 +1,6 @@
 package com.loavesandfish.needposts;
 
+
 import java.time.LocalDateTime;
 
 import javax.persistence.*;
@@ -15,7 +16,11 @@ private String postContent;
 private String city;
 private String category;
 private Integer amount;
+private String email;
+private String phoneNumber;
 private LocalDateTime timestamp;
+
+
 public Integer getId() {
 	return id;
 }
@@ -51,6 +56,19 @@ public Integer getAmount() {
 }
 public void setAmount(Integer amount) {
 	this.amount = amount;
+} 
+public String getEmail() {
+	return email;
+}
+public void setEmail(String email) {
+	this.email = email;
+}
+public String getPhoneNumber() {
+	return phoneNumber;
+}
+public void setPhoneNumber(String phoneNumber) {
+	this.name = phoneNumber;
+
 }
 public LocalDateTime getTimestamp() {
 	return timestamp;
@@ -58,6 +76,5 @@ public LocalDateTime getTimestamp() {
 public void setTimestamp(LocalDateTime timestamp) {
 	this.timestamp = timestamp;
 }
-
 
 }
