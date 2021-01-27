@@ -22,11 +22,11 @@ public class PostController {
 	
 	@PostMapping("/needposts")
 	public ResponseEntity<Post> addPost(@RequestBody Post post) {
-	post.setTimestamp(LocalDateTime.now());
-	// Saving to DB using an instance of the repo interface.
-	Post newPost = dao.save(post);
-	// RespEntity crafts response to include correct status codes.
-	return ResponseEntity.ok(newPost);
+    
+		post.setTimestamp(LocalDateTime.now());
+	  Post newPost = dao.save(post);
+	  return ResponseEntity.ok(newPost);
+
 	}
 }
 
