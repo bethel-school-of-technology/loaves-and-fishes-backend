@@ -1,5 +1,4 @@
 package com.loavesandfish.needposts;
-
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -23,9 +22,11 @@ public class PostController {
 	
 	@PostMapping("/needposts")
 	public ResponseEntity<Post> addPost(@RequestBody Post post) {
+    
 		post.setTimestamp(LocalDateTime.now());
-		Post newMessage = dao.save(post);
-		return ResponseEntity.ok(newMessage);
+	  Post newPost = dao.save(post);
+	  return ResponseEntity.ok(newPost);
+
 	}
 }
 
