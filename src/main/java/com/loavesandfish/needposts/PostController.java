@@ -1,5 +1,5 @@
 package com.loavesandfish.needposts;
-
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,13 +21,12 @@ public class PostController {
 	}
 	
 	@PostMapping("/needposts")
-	public ResponseEntity<Post> postPost(@RequestBody Post post) {
-
-	    // Saving to DB using an instance of the repo interface.
-	    Post createdPost = dao.save(post);
-
-	    // RespEntity crafts response to include correct status codes.
-	    return ResponseEntity.ok(createdPost);
+	public ResponseEntity<Post> addPost(@RequestBody Post post) {
+	post.setTimestamp(LocalDateTime.now());
+	// Saving to DB using an instance of the repo interface.
+	Post newPost = dao.save(post);
+	// RespEntity crafts response to include correct status codes.
+	return ResponseEntity.ok(newPost);
 	}
 }
 
