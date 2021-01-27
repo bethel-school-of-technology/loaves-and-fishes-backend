@@ -3,8 +3,6 @@ package com.loavesandfish.needposts;
 
 import java.time.LocalDateTime;
 
-=======
-
 import javax.persistence.*;
 
 @Entity
